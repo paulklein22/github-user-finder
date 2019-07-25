@@ -9,6 +9,7 @@ class UI {
         <div class="row">
           <div class="col-md-3">
             <img class="img-fluid mb-2" src="${user.avatar_url}">
+            <h2 class="text-center">${user.login}</h2>
             <a href="${
               user.html_url
             }" target="_blank" class="btn btn-primary btn-block mb-1">View Profile</a>
@@ -23,10 +24,18 @@ class UI {
             }</span>
             <br><br>
             <ul class="list-group">
-              <li class="list-group-item">Company: ${user.company}</li>
-              <li class="list-group-item">Website/Blog: ${user.blog}</li>
-              <li class="list-group-item">Location: ${user.location}</li>
-              <li class="list-group-item">Member Since: ${user.created_at}</li>
+              <li class="list-group-item"><strong>Company:</strong> ${
+                user.company === null ? 'n/a' : user.company
+              }</li>
+              <li class="list-group-item"><strong>Website/Blog:</strong> <a href="${
+                user.blog
+              }" target="_blank">${user.blog}</a></li>
+              <li class="list-group-item"><strong>Location:</strong> ${
+                user.location === null ? 'n/a' : user.location
+              }</li>
+              <li class="list-group-item"><strong>Member Since:</strong> ${moment(
+                user.created_at
+              ).format('MMMM Do, YYYY')}</li>
             </ul>
           </div>
         </div>
