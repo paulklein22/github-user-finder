@@ -6,5 +6,4 @@
 - ~~Create links on urls~~
 - ~~Change date format~~
 - ~~Add username to the UI~~
-- Hide API keys
-- Tweak UI
+- ~~Tweak UI~~

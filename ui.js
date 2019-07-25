@@ -29,7 +29,7 @@ class UI {
               }</li>
               <li class="list-group-item"><strong>Website/Blog:</strong> <a href="${
                 user.blog
-              }" target="_blank">${user.blog}</a></li>
+              }" target="_blank" class="text-info">${user.blog}</a></li>
               <li class="list-group-item"><strong>Location:</strong> ${
                 user.location === null ? 'n/a' : user.location
               }</li>
@@ -53,7 +53,9 @@ class UI {
         <div class="card card-body mb-2">
           <div class="row">
             <div class="col-md-6">
-              <a href="${repo.html_url}" target="_blank">${repo.name}</a>
+              <a href="${repo.html_url}" target="_blank" class="text-info">${
+        repo.name
+      }</a>
             </div>
             <div class="col-md-6">
               <span class="badge badge-danger">Stars: ${
