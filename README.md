@@ -1,5 +1,7 @@
 # Github User Finder
 
+[Visit](https://priceless-nightingale-f32ec1.netlify.com/) the app!
+
 ## To do:
 
 - ~~Remove fields if null~~
