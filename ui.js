@@ -3,6 +3,7 @@ class UI {
     this.profile = document.getElementById('profile');
   }
 
+  // prettier-ignore
   showProfile(user) {
     this.profile.innerHTML = `
       <div class="card card-body mb-3">
@@ -10,32 +11,18 @@ class UI {
           <div class="col-md-3">
             <img class="img-fluid mb-2" src="${user.avatar_url}">
             <h2 class="text-center">${user.login}</h2>
-            <a href="${
-              user.html_url
-            }" target="_blank" class="btn btn-primary btn-block mb-1">View Profile</a>
+            <a href="${user.html_url}" target="_blank" class="btn btn-primary btn-block mb-1">View Profile</a>
           </div>
           <div class="col-md-9">
-            <span class="badge badge-danger">Public Repos: ${
-              user.public_repos
-            }</span>
+            <span class="badge badge-danger">Public Repos: ${user.public_repos}</span>
             <span class="badge badge-info">Followers: ${user.followers}</span>
-            <span class="badge badge-success">Following: ${
-              user.following
-            }</span>
+            <span class="badge badge-success">Following: ${user.following}</span>
             <br><br>
             <ul class="list-group">
-              <li class="list-group-item"><strong>Company:</strong> ${
-                user.company === null ? 'n/a' : user.company
-              }</li>
-              <li class="list-group-item"><strong>Website/Blog:</strong> <a href="${
-                user.blog
-              }" target="_blank" class="text-info">${user.blog}</a></li>
-              <li class="list-group-item"><strong>Location:</strong> ${
-                user.location === null ? 'n/a' : user.location
-              }</li>
-              <li class="list-group-item"><strong>Member Since:</strong> ${moment(
-                user.created_at
-              ).format('MMMM Do, YYYY')}</li>
+              <li class="list-group-item"><strong>Company:</strong> ${user.company === null ? 'n/a' : user.company}</li>
+              <li class="list-group-item"><strong>Website/Blog:</strong> <a href="${user.blog}" target="_blank" class="text-info">${user.blog}</a></li>
+              <li class="list-group-item"><strong>Location:</strong> ${user.location === null ? 'n/a' : user.location}</li>
+              <li class="list-group-item"><strong>Member Since:</strong> ${moment(user.created_at).format('MMMM Do, YYYY')}</li>
             </ul>
           </div>
         </div>
@@ -45,6 +32,7 @@ class UI {
     `;
   }
 
+  // prettier-ignore
   showRepos(repos) {
     let output = '';
 
@@ -53,20 +41,12 @@ class UI {
         <div class="card card-body mb-2">
           <div class="row">
             <div class="col-md-6">
-              <a href="${repo.html_url}" target="_blank" class="text-info">${
-        repo.name
-      }</a>
+              <a href="${repo.html_url}" target="_blank" class="text-info">${repo.name}</a>
             </div>
             <div class="col-md-6">
-              <span class="badge badge-danger">Stars: ${
-                repo.stargazers_count
-              }</span>
-              <span class="badge badge-info">Watchers: ${
-                repo.watchers_count
-              }</span>
-              <span class="badge badge-success">Forks: ${
-                repo.forks_count
-              }</span>
+              <span class="badge badge-danger">Stars: ${repo.stargazers_count}</span>
+              <span class="badge badge-info">Watchers: ${repo.watchers_count}</span>
+              <span class="badge badge-success">Forks: ${repo.forks_count}</span>
             </div>
           </div>
         </div>
